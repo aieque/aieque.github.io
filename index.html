@@ -1,10 +1,40 @@
 <html>
 	<head>
-		<title>Gurka 2.0</title>
-	</head>
+		<title> Gurka.se 2.0 </title>
+		<script type = "text/javascript" 
+			src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+		<script>
+		var increase = 0;
+		var angle = 0;
 
+		$(document).ready(function() {
+			$("#gurka").click(function() {
+				increase = 10 * Math.max((increase / 9.7), 1);
+			});
+		});
+
+		function tick() {
+			angle += increase;
+			if(increase > 0) increase -= 0.1;
+			if(increase < 0) increase += 0.1;
+			$("#gurka").each(function() {
+				var deg = angle;
+				var rotate = 'rotate(' + deg + 'deg)';
+				$(this).css({ 
+					'-webkit-transform': rotate,
+					'-moz-transform': rotate,
+					'-o-transform': rotate,
+					'-ms-transform': rotate,
+					'transform': rotate 
+				});
+			});
+		}
+
+		setInterval(tick, 10);
+		</script>
+	</head>
 	<body>
-		<canvas id="canvas" style="border:1px solid #000000;"></canvas>
-		<script src="venn.js"></script>
+		<img id="gurka" src="https://www.miss-thrifty.co.uk/wp-content/uploads/2010/04/cucumber-garden-bugs.jpg">
 	</body>
 </html>
