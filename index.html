@@ -14,7 +14,7 @@
 					increase = 10 * Math.max((increase / 9.7), 1);
 				});
 				$("#save").click(function() {
-					document.cookie = "gurkor=" + Math.floor(angle / 360) + ";";
+					document.cookie = "gurkor=" + Math.floor(angle / 360) + "; expires=Thu, 18 Dec 2113 12:00:00 UTC";
 					alert("SAVE!");
 					alert(document.cookie);
 				});
