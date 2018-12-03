@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title> Gurka 0.0.4 </title>
+		<title> Gurka 0.0.5 </title>
 		<script type = "text/javascript" 
 			src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
 		</script>
@@ -10,7 +10,6 @@
 			if(c)
 			var angle = parseInt(c, 10) * 360;
 			else var angle = 0;
-			alert(angle);
 
 			$(document).ready(function() {
 				$("#gurka").click(function() {
@@ -18,8 +17,7 @@
 				});
 				$("#save").click(function() {
 					document.cookie = "gurkor=" + Math.floor(angle / 360) + "; expires=Thu, 18 Dec 2113 12:00:00 UTC";
-					alert("SAVE!");
-					alert(document.cookie);
+					alert("Dina gurkor är nu lagrade!");
 				});
 			});
 
