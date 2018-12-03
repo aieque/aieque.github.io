@@ -15,10 +15,10 @@
 				$("#gurka").click(function() {
 					increase = 10 * Math.max((increase / 9.7), 1);
 				});
-				$("#save").click(function() {
+				/*$("#save").click(function() {
 					document.cookie = "gurkor=" + Math.floor(angle / 360) + "; expires=Thu, 18 Dec 2113 12:00:00 UTC";
 					alert("Dina gurkor är nu lagrade!");
-				});
+				});*/
 			});
 
 			function tick() {
@@ -55,7 +55,12 @@
 			    return "";
 			}
 			
+			function save() {
+			    document.cookie = "gurkor=" + Math.floor(angle / 360) + "; expires=Thu, 18 Dec 2113 12:00:00 UTC";	
+			}
+			
 			setInterval(tick, 10);
+			setInterval(save, 1000);
 		</script>
 	</head>
 	<body>
