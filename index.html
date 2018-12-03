@@ -6,7 +6,10 @@
 		</script>
 		<script>
 			var increase = 0;
-			var angle = parseInt(getCookie("gurkor"), 10) * 360;
+			var c = getCookie("gurkor");
+			if(c)
+			var angle = parseInt(c, 10) * 360;
+			else var angle = 0;
 			alert(angle);
 
 			$(document).ready(function() {
