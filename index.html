@@ -6,7 +6,7 @@
 		</script>
 		<script>
 			var increase = 0;
-			var angle = 0;
+			var angle = getCookie("gurkor");
 
 
 			$(document).ready(function() {
@@ -14,7 +14,7 @@
 					increase = 10 * Math.max((increase / 9.7), 1);
 				});
 				$("#save").click(function() {
-					document.cookie = "username=John Smith;";
+					document.cookie = "gurkor=" + Math.floor(angle / 360) + ";";
 					alert("SAVE!");
 					alert(document.cookie);
 				});
@@ -37,7 +37,23 @@
 				});
 				$("#varv").text("Gurkor: " + Math.floor(angle / 360));
 			}
-
+			
+			function getCookie(cname) {
+			    var name = cname + "=";
+			    var decodedCookie = decodeURIComponent(document.cookie);
+			    var ca = decodedCookie.split(';');
+			    for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+				    c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+				    return c.substring(name.length, c.length);
+				}
+			    }
+			    return "";
+			}
+			
 			setInterval(tick, 10);
 		</script>
 	</head>
