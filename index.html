@@ -7,6 +7,7 @@
 		<script>
 			var increase = 0;
 			var c = getCookie("gurkor");
+			var gps = 0;
 			if(c)
 			var angle = parseInt(c, 10) * 360;
 			else var angle = 0;
@@ -14,6 +15,9 @@
 			$(document).ready(function() {
 				$("#gurka").click(function() {
 					increase = 10 * Math.max((increase / 9.7), 1);
+				});
+				$("#nara").click(function() {
+					alert("Nära");
 				});
 			});
 
@@ -69,7 +73,7 @@
 				<th> Kostnad </th>
 			</tr>
 			<tr>
-				<td> Ica Nära </td>
+				<td id="nara"> Ica Nära </td>
 				<td> 15 gurkor </td>
 			</tr>
 				
