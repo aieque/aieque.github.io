@@ -11,17 +11,22 @@
 			if(c)
 			var angle = parseInt(c, 10) * 360;
 			else var angle = 0;
+			var gurkor = Math.floor(angle / 360);
 
 			$(document).ready(function() {
 				$("#gurka").click(function() {
 					increase = 10 * Math.max((increase / 9.7), 1);
 				});
 				$("#nara").click(function() {
-					alert("Nära");
+					if(gurkor >= 15) {
+						angle -= 15 * 360;
+						gps += 1;
+					}
 				});
 			});
 
 			function tick() {
+				gurkor = Math.floor(angle / 360);
 				angle += increase;
 				if(increase > 0) increase -= 0.1;
 				if(increase < 0) increase += 0.1;
@@ -36,7 +41,7 @@
 						'transform': rotate 
 					});
 				});
-				$("#varv").text("Gurkor: " + Math.floor(angle / 360));
+				$("#varv").text("Gurkor: " + gurkor);
 			}
 			
 			function getCookie(cname) {
@@ -56,10 +61,15 @@
 			}
 			
 			function save() {
-			    document.cookie = "gurkor=" + Math.floor(angle / 360) + "; expires=Thu, 18 Dec 2113 12:00:00 UTC";	
+			    document.cookie = "gurkor=" + gurkor + "; expires=Thu, 18 Dec 2113 12:00:00 UTC";	
+			}
+			
+			function gurkorPerSecond() {
+				increase += gps;	
 			}
 			
 			setInterval(tick, 10);
+			setInterval(gurkorPerSecond, 1000);
 			setInterval(save, 1000);
 		</script>
 	</head>
