@@ -43,6 +43,7 @@
 					});
 				});
 				$("#varv").text("Gurkor: " + gurkor);
+				$("#gps").text("Gurkor per sekund: " + (gurkor - oldGurkor)); 
 				
 			}
 			
@@ -68,7 +69,6 @@
 			
 			function gurkorPerSecond() {
 				increase += gps;
-				$("#gps").text("Gurkor per sekund: " + (gurkor - oldGurkor)); 
 				oldGurkor = gurkor;
 			}
 			
@@ -79,7 +79,7 @@
 	</head>
 	<body>
 		<h1 id="varv"></h1>
-		<p id="gps"> Gurkor per sekund: </p>
+		<p id="gps"></p>
 		<br><br><br>
 		<img id="gurka" src="https://www.miss-thrifty.co.uk/wp-content/uploads/2010/04/cucumber-garden-bugs.jpg">
 		<table style="width:50%; position:absolute; right:30px; top:5px;">
