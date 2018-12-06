@@ -12,6 +12,7 @@
 			var angle = parseInt(c, 10) * 360;
 			else var angle = 0;
 			var gurkor = Math.floor(angle / 360);
+			var oldGurkor = 0;
 
 			$(document).ready(function() {
 				$("#gurka").click(function() {
@@ -42,7 +43,7 @@
 					});
 				});
 				$("#varv").text("Gurkor: " + gurkor);
-				$("#gps").text("Gurkor per sekund: " + gps); 
+				
 			}
 			
 			function getCookie(cname) {
@@ -66,7 +67,9 @@
 			}
 			
 			function gurkorPerSecond() {
-				increase += gps;	
+				increase += gps;
+				$("#gps").text("Gurkor per sekund: " + gurkor - oldGurkor); 
+				oldGurkor = gurkor;
 			}
 			
 			setInterval(tick, 10);
