@@ -8,8 +8,6 @@ $(document).ready(function() {
 	addPurchase("Ica Supermarket", 15);
 	addPurchase("Netto", 15);
 	
-	$("gurkor").text("Gurkor: " + gurkor);
-	
 	$("#gurka").click(function() {
 		increase = 10 * Math.max((increase / 9), 1);
 	});
@@ -22,7 +20,7 @@ function tick() {
 	gurkor += increase / 360;
 	renderGurka();
 	
-	
+	$("#gurkor").text("Gurkor: " + gurkor);
 }
 
 function renderGurka() {
