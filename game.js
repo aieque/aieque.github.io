@@ -19,6 +19,7 @@ function tick() {
 	
 	gurkor += increase / 360;
 	renderGurka();
+	$("gurkor").text("Gurkor: " + gurkor);
 	
 }
 
