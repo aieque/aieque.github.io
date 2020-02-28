@@ -9,7 +9,7 @@ $(document).ready(function() {
 	addPurchase("Netto", 15);
 	
 	$("#gurka").click(function() {
-		increase = 10 * Math.max((increase / 9), 1);
+		increase = 10 + Math.max((increase / 9), 1);
 	});
 });
 
