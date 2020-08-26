@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aieque</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <img src="shroom.gif" alt="">
+        <h1>Sixten Hugosson</h1>
+    </header>
+
+    <div id="main">
+        <div id=navbar>
+            <h1 template_name="home" class="selected">Home</h1>
+            <h1 template_name="projects">Projects</h1>
+            <h1 template_name="blog">Blog</h1>
+        </div>
+        <div id="content"></div>
+    </div>
 </body>
+
+<!--Templates-->
+
+<template template="home">
+    <h1>
+        Home
+    </h1>
+    <p>
+        Hello, my name is Sixten Hugosson. I am a 14 year old programmer from Sweden and I have been programming since i was eight. Currently my preferred programming language is C (c11).
+    </p>
+</template>
+
+<template template="projects">
+    <h1>
+        Projects
+    </h1>
+    <p>
+        This is a list of all my active as well as dead projects.
+    </p>
+</template>
+
+<template template="blog">
+    <h1>
+        Blog
+    </h1>
+    <p>
+        If you see this text, that means that I have made an error in my code.
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+</template>
+
 </html>
