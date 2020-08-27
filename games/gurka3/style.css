@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html, body
+{
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+#content
+{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#content > div
+{
+    width: 33%;
+    max-width: 33%;
+    min-width: 33%;
+    
+    max-height: 100vh;
+}
+
+
+/* Cucumber */
+#cucumber-container
+{
+    background-image: linear-gradient(#4cd458, #2c6b31);
+
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cucumber-container img
+{
+    margin: 5rem;
+    width: 60%;
+    position: static;
+}
+
+#cucumber-count
+{
+    font-size: 70px;
+}
+
+
+/* Shop */
+#shop-container
+{
+    background-image: linear-gradient(#4c58d4, #698ff5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.shop
+{
+    margin: 5px;
+
+    background-color: lightblue;
+    width: 80%;
+    height: 5%;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: width 50ms, height 50ms, background-color 100ms;
+}
+
+.shop p, h1
+{
+    margin: 15px;
+}
+
+.shop h1
+{
+    margin-right: auto;
+}
+
+.shop:hover 
+{
+    width: 90%;
+    height: 10%;
+}
+
+.shop:active 
+{
+    background-color: white;
+}
+
+
+/* If phone */
+@media screen and (max-width: 800px)
+{
+    #container {
+        
+    }
+}
