@@ -1,1 +1,115 @@
+<!DOCTYPE html>
 
+<!-- Hi to anyone who finds this. This is meant to be a challenge to a friend, so just ignore it.
+	Also if you found this and are the one I gave this to, well I'm impressed. Please close this tab as to not spoil any suprises. If you need a clue, just contact me. -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VHl2w6RyciDDpHIgZGV0IGludGUgc8OlIGzDpHR0Li4u</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("form").submit(function(event) {
+				let password = $("form:first").val();
+
+				switch (password) {
+				case "elucubrate":
+					
+					break;
+				default:
+					$("#response").text("Wrong password").fadeIn(0).fadeOut(1000);
+					break;
+				}
+				event.preventDefault();
+			});
+		});
+	</script>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-color: #05070e;
+			height: 100vh;
+
+			display: flex;
+			flex-direction: column;
+		}
+
+		form {
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+		}
+
+		form div {
+			display: flex;
+			height: 2rem;
+		}
+
+		h3 {
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			color: white;
+			margin: auto 1rem;
+			
+		}
+
+		.input_field {
+			width: 10rem;
+			height: 100%;
+
+			background-color: #05070e;
+			border-color:white;
+			border-radius: 5px;
+			border-width: 1px;
+
+			color: white;
+
+			margin: 0;
+		}
+
+		.button {
+			height: 100%;
+			width: 64px;
+
+			background-color: #05070e;
+			border-color:white;
+			border-radius: 5px;
+			border-width: 1px;
+
+			color: white;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			font-size: 1.5rem;
+
+			margin: 1rem auto;
+			
+		}
+
+		#response {
+			position: absolute;
+			color: white;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			font-size: 1.25rem;
+
+			top: 70%;
+			left: 50%;
+
+			transform: translate(-50%, 0);
+		}
+	</style>
+</head>
+<body>
+	<p id="response"></p>
+	<form>
+		<div>
+			<h3>Enter password:</h3>
+			<input type="text" class="input_field">
+		</div>
+		<input type="submit" value="Go!" class="button">
+	</form>
+</body>
+</html>
